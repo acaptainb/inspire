@@ -28,6 +28,7 @@ export class QuoteController {
         const quotes = AppState.quotes
         // console.log('quotes ', AppState.quotes.author,);
         setHTML('Quotes', quotes.quotes)
+        setHTML('Author', quotes.author)
         // setHTML('Quotes', quotes.type)
     }
 }

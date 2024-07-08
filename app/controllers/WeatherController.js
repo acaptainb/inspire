@@ -27,8 +27,9 @@ export class WeatherController {
         const weather = AppState.weather
         // console.log('quotes ', AppState.quotes.author,);
         const celcius = weather.temperature - 273.15
+        const fahrenheit = weather.temperature - 200.23
         setHTML('Weather', celcius.toFixed(2))
-        // console.log('appstate weathers', celcius.toFixed(2));
-        // setHTML('Quotes', quotes.type)
+        setHTML('Weather2', fahrenheit.toFixed(2))
+
     }
 }
