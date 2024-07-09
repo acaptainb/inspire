@@ -3,8 +3,9 @@ import { logger } from '../utils/Logger.js';
 
 // @ts-ignore
 // eslint-disable-next-line no-undef
+// REVIEW use this variable to interact with the sandbox API
 export const api = axios.create({
-  baseURL: baseURL,
+  baseURL: 'https://sandbox.codeworksacademy.com/',
   timeout: 8000,
   withCredentials: true
 })
@@ -20,9 +21,9 @@ function handleAxiosError(error) {
   } else if (error.request) {
     // The request was made but no response was received
     logger.warn('[📡 AXIOS_ERROR_NO_RESPONSE]', error.request)
-  }else {
+  } else {
     // Something happened in setting up the request that triggered an Error
-    logger.warn('[📡 AXIOS_ERROR_INVALID_REQUEST]',error.message)
+    logger.warn('[📡 AXIOS_ERROR_INVALID_REQUEST]', error.message)
   }
   return Promise.reject(error)
 }

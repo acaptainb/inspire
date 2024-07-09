@@ -19,12 +19,9 @@ class ObservableAppState extends EventEmitter {
   /** @type {Weather} */
   weather = null
 
-  /** @type {Todos} */
-  todo = [
-    new Todos({
-      description: '',
-      completed: Boolean,
-    })
+  /** @type {Todos[]} */
+  todos = [
+
   ]
 
 

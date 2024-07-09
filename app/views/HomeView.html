@@ -17,20 +17,22 @@
 
 
     <div class="row text-end text-light fs-4 fst-italic">
-        <div class="col-12">
-            <p>Celsius: <span id="Weather"></span></p>
-            <p>Fahrenheit: <span id="Weather2"></span></p>
+        <div id="here" class="col-12">
+            <!-- <p>Celsius: <span id="Weather"></span></p>
+            <p>Fahrenheit: <span id="Weather2"></span></p> -->
         </div>
 
 
 
 
+        <form onsubmit="app.TodoController.createTodo()">
 
-
-        <input class="form-control me-1" maxlength="15" minlength="3" type="text" placeholder="Todolist"
-            aria-label="Search" id="name" name="name" required>
-        <button type="submit" class="btn btn-outline-success text-light" type="submit">Create</button>
+            <input class="form-control me-1" maxlength="15" minlength="3" type="text" placeholder="Todolist"
+                aria-label="Search" id="name" name="description" required>
+            <button type="submit" class="btn btn-outline-success text-light" type="submit">Create</button>
+        </form>
     </div>
+
 
     <div class="row text-end text-light fs-3 mt-5">
         <div class="col-12">
@@ -44,8 +46,10 @@
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
-                    <div class="row" id="todo-list">
-                        todolist
+                    <div class="row text-dark" id="todo-list">
+
+
+
                     </div>
                 </div>
             </div>
